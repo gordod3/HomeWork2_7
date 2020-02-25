@@ -1,4 +1,4 @@
-public class Name implements Comparable<Name> {
+public class Name {
     private String name;
 
     public Name(String name) {
@@ -10,12 +10,8 @@ public class Name implements Comparable<Name> {
     }
 
     @Override
-    public int compareTo(Name o) {
-        return this.name.length() - o.getName().length();
-    }
-
-    @Override
     public String toString() {
         return this.name;
     }
+
 }

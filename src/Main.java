@@ -40,7 +40,13 @@ public class Main {
         }
         quickIterator(listC);
         System.out.println("______________________________");
-        Collections.sort(listC);
+        Comparator<Name> comparator = new Comparator<Name>() {
+            @Override
+            public int compare(Name o1, Name o2) {
+                return o1.getName().length() - o2.getName().length();
+            }
+        };
+        listC.sort(comparator);
         quickIterator(listC);
     }
 }
